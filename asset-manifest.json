@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.2f8c83cb.css",
-    "main.js": "/react-gh-pages/static/js/main.3d326ee5.js",
-    "static/js/787.2578bd51.chunk.js": "/react-gh-pages/static/js/787.2578bd51.chunk.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.2f8c83cb.css.map": "/react-gh-pages/static/css/main.2f8c83cb.css.map",
-    "main.3d326ee5.js.map": "/react-gh-pages/static/js/main.3d326ee5.js.map",
-    "787.2578bd51.chunk.js.map": "/react-gh-pages/static/js/787.2578bd51.chunk.js.map"
+    "main.css": "/DataBookApp/static/css/main.2f8c83cb.css",
+    "main.js": "/DataBookApp/static/js/main.58b707d5.js",
+    "static/js/787.2578bd51.chunk.js": "/DataBookApp/static/js/787.2578bd51.chunk.js",
+    "index.html": "/DataBookApp/index.html",
+    "main.2f8c83cb.css.map": "/DataBookApp/static/css/main.2f8c83cb.css.map",
+    "main.58b707d5.js.map": "/DataBookApp/static/js/main.58b707d5.js.map",
+    "787.2578bd51.chunk.js.map": "/DataBookApp/static/js/787.2578bd51.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f8c83cb.css",
-    "static/js/main.3d326ee5.js"
+    "static/js/main.58b707d5.js"
   ]
 }
