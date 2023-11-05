@@ -12,6 +12,7 @@ export default function Navbar() {
   const logOut = async () => {
     try {
       await signOut(auth);
+      sessionStorage.clear();
       navigate("/login");
     } catch (err) {
       console.error(err);

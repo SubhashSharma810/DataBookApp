@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import '../style/Login.css'
 import ForgotPasswordModal from './Forgot.model';
 import { useAuth } from '../context/AuthContext';
+import AutoStoriesIcon from '@mui/icons-material/AutoStories';
+
 
 export default function Login() {
   const {  login } = useAuth();
@@ -36,7 +38,22 @@ export default function Login() {
        
 
         // console.log(values)
+        
     };
+     //Gradient For Logo Text
+     const gradientStyle = {
+        background: 'linear-gradient(45deg, #eeeeEDFF,  #3B37aaFF,#00000aFF)',
+        WebkitBackgroundClip: 'text', // For older browsers
+        backgroundClip: 'text',
+        color: 'transparent',
+        position:'absolute',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        fontSize:74,
+        top:20,
+        left:'10%'
+    
+      };
     return (
         <div style={{maxHeight:'auto'}}>
             <section className="h-100 gradient_form" >
@@ -47,9 +64,11 @@ export default function Login() {
 
                                 <div className="card-body p-md-5 mx-md-4">
 
-                                    <div className="text-center">
-                                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="logo" style={{ width: 185 }} />
-                                        <h4 className="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
+                                <div className="text-center" style={{backgroundColor:'#0001',textAlign:'center',
+                                         position:'relative', height:'170px', display:'flex',borderRadius:7}}>
+                                    <b style={gradientStyle}>Data </b><AutoStoriesIcon  sx={{  left:'52%',fontSize:120,m:0, p:0,position:'absolute' ,width:120 ,color: '#1f1d5e', top:10 }} />
+                                        {/* <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp" alt="logo" style={{ }} /> */}
+                                        <h4 className="mt-1 pb-1" style={{position:'absolute',bottom:'0%', left:'20%',right:'20%', }}>We are The Sweb Tech. Team</h4>
                                     </div>
 
                                     <form>
