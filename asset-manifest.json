@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/DataBookApp/static/css/main.2f8c83cb.css",
-    "main.js": "/DataBookApp/static/js/main.641bf834.js",
+    "main.js": "/DataBookApp/static/js/main.1ca05ed4.js",
     "static/js/787.2578bd51.chunk.js": "/DataBookApp/static/js/787.2578bd51.chunk.js",
     "index.html": "/DataBookApp/index.html",
     "main.2f8c83cb.css.map": "/DataBookApp/static/css/main.2f8c83cb.css.map",
-    "main.641bf834.js.map": "/DataBookApp/static/js/main.641bf834.js.map",
+    "main.1ca05ed4.js.map": "/DataBookApp/static/js/main.1ca05ed4.js.map",
     "787.2578bd51.chunk.js.map": "/DataBookApp/static/js/787.2578bd51.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.2f8c83cb.css",
-    "static/js/main.641bf834.js"
+    "static/js/main.1ca05ed4.js"
   ]
 }
