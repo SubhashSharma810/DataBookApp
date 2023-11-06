@@ -15,7 +15,7 @@ import { Timestamp } from "firebase/firestore";
 import EditForm from "../layout/EditModel";
 import "../style/Report.css";
 import EditNoteIcon from '@mui/icons-material/EditNote';
-import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
+// import DeleteRoundedIcon from '@mui/icons-material/DeleteRounded';
 import { useAuth } from '../context/AuthContext';
 import { useMediaQuery } from '@mui/material';
 
@@ -56,7 +56,8 @@ const modalOverlayStyle = {
 
 
 export default function Report() {
-  const { fatchDataFromDb, deleteDataFromDataBase, saveEditData } = useAuth();
+  const { fatchDataFromDb, saveEditData } = useAuth();
+  // const { fatchDataFromDb, deleteDataFromDataBase, saveEditData } = useAuth();
   const [rows, setRows] = useState([]);
   const [editingData, setEditingData] = useState([]);
   const [editModalOpen, setEditModalOpen] = useState(false);
@@ -66,7 +67,7 @@ export default function Report() {
 const isLargeScreen =  useMediaQuery('(min-width:1180px)');
 const containerStyle = {
  
-  paddingLeft: isLargeScreen ? '80px' : '50px',
+  paddingLeft: isLargeScreen ? '80px' : '0px',
 };
 
 
@@ -76,10 +77,10 @@ const containerStyle = {
   };
 
   // Delete Data From FireStore  
-  const handleDelete = async (data) => {
-    console.log(data);
-    deleteDataFromDataBase(data, setRows);
-  };
+  // const handleDelete = async (data) => {
+  //   console.log(data);
+  //   deleteDataFromDataBase(data, setRows);
+  // };
   
   // Edit Model function For Open And Close
   const handleEdit = (data) => {
@@ -153,7 +154,7 @@ const containerStyle = {
                         <StyledTableCell align="right" style={containerStyle}>Categores</StyledTableCell>
                         <StyledTableCell align="right">quantities&nbsp;(N)</StyledTableCell>
                         <StyledTableCell align="right">prices&nbsp;(Rs)</StyledTableCell>
-                        <StyledTableCell align="right">Profit Percentage&nbsp;(%)</StyledTableCell>
+                        {/* <StyledTableCell align="right">Profit Percentage&nbsp;(%)</StyledTableCell> */}
                         <StyledTableCell align="right">Profit Amount&nbsp;(Rs)</StyledTableCell>
                         <StyledTableCell align="right">Dates&nbsp;(Rs)</StyledTableCell>
                         <StyledTableCell align="right">Times&nbsp;(Rs)</StyledTableCell>
@@ -184,9 +185,9 @@ const containerStyle = {
                         <StyledTableCell align="right">
                           {post.profit || "N/A"} {/* Display "N/A" if the profit is an empty string */}
                         </StyledTableCell>
-                        <StyledTableCell align="right">
-                        {post.price && post.profit ? (post.price * parseFloat(post.profit) / 100).toFixed(2) : "N/A"} {/* Display "N/A" if the profit is an empty string */}
-                        </StyledTableCell>
+                        {/* <StyledTableCell align="right"> */}
+                        {/* {post.price && post.profit ? (post.price * parseFloat(post.profit) / 100).toFixed(2) : "N/A"}  */}
+                        {/* </StyledTableCell> */}
                         <StyledTableCell align="right">
                           {post.date ? (isValidDate(post.date) ? post.date.toDate().toLocaleDateString() : "Invalid Date") : "N/A"}
                         </StyledTableCell>
@@ -198,7 +199,7 @@ const containerStyle = {
                         <StyledTableCell className="editDeleteBtnGroup" align="right" style={{ justifyContent: 'space-between' }}>
                           <button className="btnEdit" onClick={() => handleEdit(post)}><EditNoteIcon color="success" fontSize="small" />
                           </button>
-                          <button className="btnDelete" onClick={() => handleDelete(post)}><DeleteRoundedIcon sx={{ color: 'red' }} stroke={null} fontSize="small" /></button>
+                          {/* <button className="btnDelete" onClick={() => handleDelete(post)}><DeleteRoundedIcon sx={{ color: 'red' }} stroke={null} fontSize="small" /></button> */}
                         </StyledTableCell>
                       </StyledTableRow>
 
@@ -223,9 +224,9 @@ const containerStyle = {
                           <StyledTableCell align="right">
                             {post.profit || "N/A"} {/* Display "N/A" if the profit is an empty string */}
                           </StyledTableCell>
-                          <StyledTableCell align="right">
-                          {post.price && post.profit ? (post.price * parseFloat(post.profit) / 100).toFixed(2) : "N/A"} {/* Display "N/A" if the profit is an empty string */}
-                        </StyledTableCell>
+                          {/* <StyledTableCell align="right"> */}
+                          {/* {post.price && post.profit ? (post.price * parseFloat(post.profit) / 100).toFixed(2) : "N/A"}  */}
+                        {/* </StyledTableCell> */}
                           <StyledTableCell align="right">
                             {post.date ? (isValidDate(post.date) ? post.date.toDate().toLocaleDateString() : "Invalid Date") : "N/A"}
                           </StyledTableCell>
@@ -236,7 +237,7 @@ const containerStyle = {
                           <StyledTableCell className="editDeleteBtnGroup" align="right">
                             <button className="btnEdit" onClick={() => handleEdit(post)}><EditNoteIcon color="success" fontSize="small" />
                             </button>
-                            <button className="btnDelete" onClick={() => handleDelete(post)}><DeleteRoundedIcon sx={{ color: 'red' }} stroke={null} fontSize="small" /></button>
+                            {/* <button className="btnDelete" onClick={() => handleDelete(post)}><DeleteRoundedIcon sx={{ color: 'red' }} stroke={null} fontSize="small" /></button> */}
                           </StyledTableCell>
                         </StyledTableRow>
                       )))}

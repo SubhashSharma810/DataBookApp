@@ -27,7 +27,7 @@ export default function Footer() {
       variant='solid'
       invertedColors
 
-      sx={{ backgroundColor: '#dfe6ed',color:'#000' }}>
+      sx={{ backgroundColor: '#dfe6ed',color:'#000' , mt:'40px' }}>
       <Box sx={{ p: 2,cursor:'none' }}>
         <IconButton sx={gradientStyle}>Data <AutoStoriesIcon sx={{ml:1,fontSize:'40px',color:'#000'}} /></IconButton>
       </Box>

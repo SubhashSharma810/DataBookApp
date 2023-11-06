@@ -127,15 +127,15 @@ export default function DataForm() {
             onChange={(event) => setValues((prev) => ({ ...prev, profit: event.target.value }))}
             className="fieldsinput"id="inputRemAmount" placeholder="" />
         </div>
-        <div className="fields">
+        {/* <div className="fields">
           <div className="fieldsLabel">
             <input className="fieldsCheck" type="checkbox" id="gridCheck" />
             <label className="" htmlFor="gridCheck">
               Discount %
             </label>
           </div>
-        </div>
-        <div className="fields">
+        </div> */}
+        <div className="fields mt-5">
           <button type="submit" onClick={handelDataSubmit} className="btnSubmit">Submmit</button>
         </div>
       </form>
